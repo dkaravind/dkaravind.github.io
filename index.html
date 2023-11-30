@@ -1,84 +1,290 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Aravind Dilip Kumar</title>
-        <script>
+  <head>
+    <title>Aravind Dilip Kumar</title>
+    <script></script>
+    <style>
+      body {
+        background: #fff;
+        border: none;
+        color: #121212;
+        font-family: Archivo, "Helvetica Neue", sans-serif;
+        font-size: 18px;
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        min-height: 100%;
+      }
 
-        </script>
-        <style>
-            body{
-                font-family: "HelveticaNeue-Light", "Helvetica Neue Light", "Helvetica Neue", Helvetica, Arial, "Lucida Grande", sans-serif; 
-                font-weight: 300;
-                background-color: #fff8f2;
-            }
+      @media (max-width: 100px) {
+        body {
+          padding: 0;
+        }
+      }
 
-            .parent{
-                padding: 10%;
-            }
+      /* @media (min-width: 1050px) {
+        body {
+          padding: 300px;
+        }
+      } */
 
-            .name{
-                font-size: 5rem;
-                font-weight: 600;
-                font-family: Helvetica, sans-serif;
-            }
+      h1,
+      h2,
+      h3,
+      h4,
+      h5 {
+        font-family: "Averia Serif Libre", cursive;
+        color: #3d4449;
+      }
 
-            .intro{
-                font-size: 1.5rem;
-            }
+      a {
+        color: inherit;
+        transition: all 0.15s;
+        text-decoration: none;
+      }
 
-            .writeup{
-                font-size: 0.95rem;
-                text-align: justify;
-            }
+      a:hover {
+        text-decoration: underline;
+      }
 
-            .work{
-                padding-top: 3rem;;
-            }
+      .parent {
+        display: grid;
+        grid-template-areas:
+          "hello"
+          "about"
+          "contact"
+          "footer";
+      }
 
-            .work-heading{
-                font-size: 1.5rem;
-            }
+      .content{
+        padding-top: 36px;
+      }
+      .header {
+        background-color: #f5f6f7;
+      }
 
-            .work-image{
-                display: flex;
-                justify-content: space-evenly;
-                padding-top: 1rem;
-            }
+      .title {
+        font-size: inherit;
+        font-weight: inherit;
+        margin: 0;
+        line-height: 1.25;
+      }
 
-            .actions{
-                position: fixed;
-                bottom: 0;
-                left: 0;
-                width: 100%;
-                background-color: blanchedalmond;
-                display: flex;
-                justify-content: space-evenly;
-                align-items: center;
-                min-height: 3rem;
-                max-height: 4rem;
-            }
+      .title a {
+        border-bottom: 1px solid transparent;
+      }
 
-            .actionItem{
-                font-size: 1.5rem;
-                color: black;
-            }
+      .hello {
+        grid-area: "hello";
+      }
 
-            .actionItem:hover{
-                font-size: 1.8rem;
-                color: #f12345;
-            }
+      .page-header {
+        margin: 80px auto 60px;
+      }
 
-            .work-item{
-                max-height: 5rem;
-                max-width: 5rem;
-            }
+      .inner-section {
+        margin: 0 auto;
+        /* max-width: 560px; */
+        width: 90%;
+      }
 
+      .page-title {
+        font-size: 36px;
+        font-weight: 600;
+        letter-spacing: -0.45px;
+        line-height: 1.25;
+        margin: 0;
+        word-break: break-word;
+      }
 
+      .page-content {
+        word-break: break-word;
+      }
 
-        </style>
-    </head>
-    <body>
-        <div class="parent">
+      .page-content p {
+        margin-bottom: 25px;
+        line-height: 1.6;
+      }
+
+      .page-content *:first-child {
+        margin-top: 0;
+      }
+
+      .about .page-content{
+        grid-area: "about";
+        display: grid;
+        grid-template-areas: "story"
+        "work"
+        "skill";
+      }
+
+      .story{
+        grid-area: "story";
+      }
+
+      .work{
+        grid-area: "work";
+      }
+
+      .skill{
+        grid-area: "skill";
+      }
+
+      .work p{
+        margin-top: 0 !important; 
+        margin-bottom: 0 !important;
+      }
+
+      .work-experience{
+        padding-bottom: 25px;
+      }
+      .contact {
+        grid-area: "contact";
+      }
+
+      .footer {
+        display: block;
+        margin-top: 60px;
+        padding: 25px 0;
+        border-top: 1px solid rgba(0, 0, 4, 0.125);
+        font-size: 16px;
+        text-align: center;
+        width: 100%;
+      }
+
+      .copyright {
+        line-height: 1;
+        padding: 0 18px;
+        margin: 0;
+      }
+
+      *::selection {
+        background: #121212;
+        color: #fff;
+      }
+
+      @media (max-width: 620px) {
+        .header {
+          padding: 26px 7.5%;
+        }
+
+        .page-header {
+          margin: 50px auto;
+        }
+        .page-content p {
+          margin-bottom: 25px;
+        }
+        .copyright {
+          text-align: left;
+        }
+      }
+
+      @media(min-width: 621px){
+        .header{
+            padding: 30px 5%;
+        }        
+      }
+      @media(min-width: 1050px){
+        .about .page-content {
+            grid-area: "about";
+            display: grid;
+            grid-template-areas: 
+            "story work"
+            "skill skill";
+            grid-template-columns: 1fr 1fr;
+            gap: 15px;
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <header class="header">
+      <h1 class="title"><a href="#">Aravind Dilip Kumar</a></h1>
+    </header>
+    <main class="content">
+      <main class="hello">
+        <header class="page-header inner-section">
+            <h1 class="page-title">&#x1F44B Hello</h1>
+          </header>
+          <div class="page-content inner-section">
+            <p>
+              I'm Aravind Dilip Kumar. I'm a Senior Full Stack Engineer based in
+              United Kingdom.
+            </p>
+            <p>
+              I work on .Net technologies developing WebAPIs and gRPC services, Azure PaaS services including Azure WebApp, Functions, Logic App, Data Factory, KeyVault, Storage(Blolb, Queue), etc., and also React and Typescript in the frontend.
+            </p>
+            <p>
+                I've recently started writing few articles <a href="">here</a>.
+            </p>
+          </div>
+      </main>
+      <main class="about">
+        <header class="page-header inner-section">
+            <h1 class="page-title">&#x1F9D1&#x200D&#x1F4BB About</h1>
+        </header>
+        <div class="page-content inner-section">
+            <div class="story">
+                <h4>My Story</h4>
+                <p>
+                    I've been helping some of the industry leaders in their digital transformation journey into cloud since 2017. During this time I've had the opportunity to work with some amazing people on serveral cutting-edge projects.
+                </p>
+                <p>
+                    I hold esteemed certifications in Azure and Power BI, validating proficiency in cloud and analytics space. My latest tech stack includes .Net gRPC and .Net Web API (both .Net 6), Entity Framework, React, Power BI, MongoDB, Azure Logic App, Azure Data Factory, and Open Policy Agent(OPA).
+                </p>
+                <p>
+                    A true advocate of agile Scrum methodology, I excel in collaborative environments and have a knack for delivering exceptional results.
+                </p>
+            </div>
+
+            <div class="work">
+                <h4>Where I've worked</h4>
+                <div class="work-experience">
+                    <p>
+                        2022 - present
+                    </p>
+                    <p>
+                        Infosys Limited, Manchester, United Kingdom
+                    </p>
+                    <p>
+                        Senior Full Stack Engineer, working for PwC as contractor.
+                    </p>
+                </div>
+                <div class="work-experience">
+                    <p>
+                        2017 - 2022
+                    </p>
+                    <p>
+                        Infosys Limited, Thiruvananthapuram, India
+                    </p>
+                    <p>
+                        Senior .Net Engineer, working for Caterpillar and Perkins Engines as contractor.
+                    </p>
+                </div>
+                
+            </div>
+        </div>
+      </main>
+
+      <main class="contact">
+        <header class="page-header inner-section">
+            <h1 class="page-title">&#x1F91D Contact</h1>
+          </header>
+          <div class="page-content inner-section">
+            <p>
+                I prefer email to any other form of contact, so I suggest emailing me at <a href="mailto:aravind.d95@gmail.com,dkaravind@outlook.com?subject=Contact via Portfolio">dkaravind@outlook.com</a>
+            </p>
+            <p>
+                You can also follow me on <a href="https://www.linkedin.com/in/dkaravind/">LinkedIn</a>
+            </p>
+          </div>
+      </main>
+    </main>
+    <footer class="footer">
+      <p class="copyright">&copy 2023 <a href="#">Aravind Dilip Kumar</a></p>
+    </footer>
+    <!-- <div class="parent">
+            
             <div class="name">
                 I'm Aravind Dilip Kumar
             </div>
@@ -103,11 +309,11 @@
             </div>
             <div class="actions">
                 <span class="actionItem"><a href="https://www.dropbox.com/scl/fi/isoa50yn6ufnglc67mysy/AravindDilipKumar.pdf?rlkey=n1iqj948f6jn84trws6h1cyta&dl=1">Get my resume</a> </span>
-                <span class="actionItem"><a href="mailto:aravind.d95@gmail.com,dkaravind@outlook.com?subject=Hello Aravind&body=Hi, ">Get in touch with me!</a></span>
+                <span class="actionItem"><a href="&body=Hi, ">Get in touch with me!</a></span>
                 <span class="actionItem"><a href="https://medium.com/@dkaravind">Blogs here</a></span>
                 <span class="actionItem"><a href="https://github.com/dkaravind">Github</a></span>
                 <span class="actionItem"><a href="https://www.linkedin.com/in/dkaravind/">LinkedIn</a></span>
             </div>
-        </div>
-    </body>
+        </div> -->
+  </body>
 </html>
